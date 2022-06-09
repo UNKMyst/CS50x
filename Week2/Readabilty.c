@@ -51,7 +51,7 @@ int allCounts(string text)
 int colemanLiauIndex(int a, int b, int c)
 {
     // was given in instruction
-    return index = round(0.0588*(a/((float)b/100))-0.296*(c/((float)b/100))-15.8);
+    return index = round(0.0588 * (a / ((float)b / 100)) - 0.296 * (c / ((float)b / 100)) - 15.8);
 }
 
 void printGrade(int grade)
