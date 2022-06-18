@@ -40,8 +40,8 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 
             // Apply given Algorithm
             int sepiaRed = round(0.393 * originRed + 0.769 * originGreen + 0.189 * originBlue);
-            int sepiaGreen = round(0.349 * originRed+ 0.686 * originGreen+ 0.168 * originBlue);
-            int sepiaBlue = round(0.272 * originRed+ 0.534 * originGreen+ 0.131 * originBlue);
+            int sepiaGreen = round(0.349 * originRed + 0.686 * originGreen + 0.168 * originBlue);
+            int sepiaBlue = round(0.272 * originRed + 0.534 * originGreen + 0.131 * originBlue);
 
             // if exceed max then put 255
             if (sepiaRed > 255)
@@ -138,7 +138,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // Copy to Original image
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j <width; j++)
+        for (int j = 0; j < width; j++)
         {
             image[i][j].rgbtRed = temp[i][j].rgbtRed;
             image[i][j].rgbtBlue = temp[i][j].rgbtBlue;
