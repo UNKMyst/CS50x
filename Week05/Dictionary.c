@@ -1,5 +1,3 @@
-// Made by Paclibar, Josh Using CS50x Libraries/Files
-
 // Implements a dictionary's functionality
 
 #include <ctype.h>
@@ -74,11 +72,11 @@ bool load(const char *dictionary)
     // If not open return null
     if (file == NULL)
     {
-        printf("Unable to open %s", dictionary);
+        printf("Unable to open %s\n", dictionary);
         return false;
     }
     // Declare Var word
-    char word[LENGTH+1];
+    char word[LENGTH + 1];
 
     // Will Scan dictionary for String up until End of File (EOF)
     while (fscanf(file, "%s", word) != EOF)
@@ -126,7 +124,7 @@ bool unload(void)
         node *cursor = table[i];
 
         // If Cursor is not NULL, Free memory
-        while (cursor)
+        while (cursor != NULL)
         {
             // Create tmp node
             node *tmp = cursor;
@@ -135,7 +133,7 @@ bool unload(void)
             // Free tmp node
             free(tmp);
         }
-        if (cursor == NULL)
+        if (cursor == NULL && i == N - 1)
         {
              return true;
         }
